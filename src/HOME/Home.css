@@ -1,0 +1,42 @@
+
+.main{
+    background-color: rgb(215, 223, 224);
+   
+}
+
+/* .hidden{
+    background-color: rgb(228, 159, 67);
+} */
+.first{
+    margin-top: 60px;
+    text-align: center;
+}
+
+.iam{
+   
+    height: 159px;
+    width: 895px;
+
+}
+.qw{
+    padding: 20px;
+
+}
+.qa{
+    
+    
+    padding-left: 9px;
+    width: 188.4px;
+    height: 255.2px;
+
+}
+.btn{
+    border-radius: 30px;
+}
+.input{
+    background-color: #fff;
+    border-radius: 20px;
+    width: 40vh;
+    color: black;
+}
+
