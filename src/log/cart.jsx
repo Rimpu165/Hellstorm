@@ -6,6 +6,7 @@ import { FaInstagramSquare } from "react-icons/fa";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import "./Cart.css";
+import Footer from "./Footer";
 
 const Cart = () => {
   const { id } = useParams(); 
@@ -104,49 +105,7 @@ const Cart = () => {
       </div>
        
     </div>
-     <footer className="flex justify-between bg-black text-white p-10 space-y-8 gap-14 mt-15 ">
-     <div className=" flex flex-col space-y-2 ">
-       <h6 className="footer-title">Services</h6>
-       <a className="link link-hover">Branding</a>
-       <a className="link link-hover">Design</a>
-       <a className="link link-hover">Marketing</a>
-       <a className="link link-hover">Advertisement</a>
-     </div>
-   
-     <div className="flex flex-col space-y-2">
-       <h6 className="footer-title">Company</h6>
-       <a className="link link-hover">About us</a>
-       <a className="link link-hover">Contact</a>
-       <a className="link link-hover">Jobs</a>
-       <a className="link link-hover">Press kit</a>
-     </div>
-   
-     <div className="flex flex-col space-y-2">
-       <h6 className="footer-title">Legal</h6>
-       <a className="link link-hover">Terms of use</a>
-       <a className="link link-hover">Privacy policy</a>
-       <a className="link link-hover">Cookie policy</a>
-     </div>
-   
-     <div className="flex flex-col space-y-2">
-       <h6 className="footer-title">Newsletter</h6>
-       <div className="w-full max-w-sm">
-         <label className="block mb-2">Enter your email address</label>
-         <div className="flex">
-           <input
-             type="text"
-             placeholder=    "                  www.gmail.com"
-             className="input input-bordered w-full rounded-r-none" />
-         <button className="btn bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 py-2 rounded-l-none">
-     Subscribe
-   </button>
-         </div>
-         <h6 className="mt-2">Keep in Touch  </h6>
-         <a className="flex gap-3 mt-1 text-lg" > <FaSquareXTwitter/>  <FaFacebookSquare /> <FaInstagramSquare/></a>
-         {/* <h6> <FaSquareXTwitter/> <FaFacebookSquare/></h6> */}
-       </div>
-     </div>
-   </footer>
+     <Footer/>
    </>
   );
 };

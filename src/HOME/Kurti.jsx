@@ -31,7 +31,7 @@ export const kurtis = [
       rating: 4.5,
       originalPrice: 1299,
       discountPrice: 899,
-      image: K1,
+      img: K1,
       description: "A vibrant floral A-line kurti perfect for casual outings."
     },
     {
@@ -40,7 +40,7 @@ export const kurtis = [
       rating: 4.7,
       originalPrice: 1499,
       discountPrice: 999,
-      image: K2,
+      img: K2,
       description: "Elegant straight-cut kurti with intricate embroidery."
     },
     {
@@ -49,7 +49,7 @@ export const kurtis = [
       rating: 4.3,
       originalPrice: 999,
       discountPrice: 699,
-      image: K3,
+      img: K3,
       description: "Comfortable cotton kurti with traditional prints."
     },
     {
@@ -58,7 +58,7 @@ export const kurtis = [
       rating: 4.6,
       originalPrice: 1799,
       discountPrice: 1299,
-      image: K4,
+      img: K4,
       description: "Flowy georgette Anarkali kurti with delicate lacework."
     },
     {
@@ -67,7 +67,7 @@ export const kurtis = [
       rating: 4.8,
       originalPrice: 1599,
       discountPrice: 1199,
-      image: K5,
+      img: K5,
       description: "Traditional Lucknowi Chikan Kari kurti in soft fabric."
     },
     {
@@ -76,7 +76,7 @@ export const kurtis = [
       rating: 4.2,
       originalPrice: 1099,
       discountPrice: 799,
-      image: K6,
+      img: K6,
       description: "Lightweight rayon kurti with vibrant prints."
     },
     {
@@ -85,7 +85,7 @@ export const kurtis = [
       rating: 4.4,
       originalPrice: 1999,
       discountPrice: 1499,
-      image: K7,
+      img: K7,
       description: "Luxurious silk blend kurti with a glossy finish."
     },
     {
@@ -94,7 +94,7 @@ export const kurtis = [
       rating: 4.1,
       originalPrice: 899,
       discountPrice: 599,
-      image: K8,
+      img: K8,
       description: "Breathable cotton slub kurti for everyday wear."
     },
     {
@@ -103,7 +103,7 @@ export const kurtis = [
       rating: 4.5,
       originalPrice: 1399,
       discountPrice: 999,
-      image: K9,
+      img: K9,
       description: "Artistic Kalamkari print kurti with rich colors."
     },
     {
@@ -112,7 +112,7 @@ export const kurtis = [
       rating: 4.3,
       originalPrice: 1299,
       discountPrice: 899,
-      image: K10,
+      img: K10,
       description: "Trendy peplum style kurti with a flared bottom."
     },
     {
@@ -121,7 +121,7 @@ export const kurtis = [
       rating: 4.6,
       originalPrice: 1499,
       discountPrice: 1099,
-      image: K11,
+      img: K11,
       description: "Traditional Bandhani print kurti in bright hues."
     },
     {
@@ -130,7 +130,7 @@ export const kurtis = [
       rating: 4.7,
       originalPrice: 1799,
       discountPrice: 1399,
-      image: K12,
+      img: K12,
       description: "Elegant Chanderi silk kurti with a subtle sheen."
     },
     {
@@ -139,7 +139,7 @@ export const kurtis = [
       rating: 4.4,
       originalPrice: 1899,
       discountPrice: 1499,
-      image: K13,
+      img: K13,
       description: "Coordinated kurti and palazzo set for a complete look."
     },
     {
@@ -148,7 +148,7 @@ export const kurtis = [
       rating: 4.8,
       originalPrice: 2199,
       discountPrice: 1699,
-      image: K14,
+      img: K14,
       description: "Flowing Anarkali kurti paired with a matching dupatta."
     },
     {
@@ -157,7 +157,7 @@ export const kurtis = [
       rating: 4.2,
       originalPrice: 999,
       discountPrice: 749,
-      image: K15,
+      img: K15,
       description: "Simple and elegant straight-fit kurti for daily wear."
     },
     {
@@ -166,7 +166,7 @@ export const kurtis = [
       rating: 4.5,
       originalPrice: 1399,
       discountPrice: 999,
-      image: K16,
+      img: K16,
       description: "Functional A-line kurti featuring convenient pockets."
     },
     {
@@ -175,7 +175,7 @@ export const kurtis = [
       rating: 4.3,
       originalPrice: 1199,
       discountPrice: 899,
-      image: K17,
+      img: K17,
       description: "Stylish kurti with peasant sleeves and floral embroidery."
     },
     {
@@ -184,7 +184,7 @@ export const kurtis = [
       rating: 4.4,
       originalPrice: 1099,
       discountPrice: 799,
-      image: K18,
+      img: K18,
       description: "Modern tunic-style kurti with a relaxed fit."
     },
     {
@@ -193,7 +193,7 @@ export const kurtis = [
       rating: 4.6,
       originalPrice: 1599,
       discountPrice: 1199,
-      image: K19,
+      img: K19,
       description: "Trendy layered kurti with contrasting panels."
     },
     {
@@ -202,7 +202,7 @@ export const kurtis = [
       rating: 4.7,
       originalPrice: 1699,
       discountPrice: 1299,
-      image: K20,
+      img: K20,
       description: "Fashion-forward kurti with an asymmetrical hemline."
     }
   ];
@@ -218,7 +218,7 @@ const Kurti = () => {
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
       {kurtis.map((item) => (
         <div key={item.id} className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition">
-          <img src={item.image} alt={item.title} className="w-full h-64 object-cover" />
+          <img src={item.img} alt={item.title} className="w-full h-64 object-cover" />
           <div className="p-4">
             <h3 className="text-lg font-semibold text-gray-800">{item.title}</h3>
             <p className="text-sm text-gray-600 mt-1">{item.description.slice(0,20)}...</p>

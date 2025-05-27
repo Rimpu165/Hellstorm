@@ -3,18 +3,36 @@ import { useParams } from 'react-router-dom'
 import { nikeProducts } from './Nike';
 import Footer from '../log/Footer';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../redux/slice';
 
 
 const Nike1 = () => {
     const {id}=useParams();
     const nike=nikeProducts.find((item) => item.id === Number(id))
-    console.log("pro",nike);
-    
     const[size,setSize]=useState("")
     const [quantity, setQuantity] = useState(1);
     
   const handleSizeChange = (e) => setSize(e.target.value);
   const handleQuantityChange = (e) => setQuantity(e.target.value);
+
+    const dispatch = useDispatch()
+  const handleAddToCart = () => {   
+  if (!size) {
+    alert("Please select a size!");
+    return;
+  }
+  const itemToAdd={
+    id : nike.id,
+    title : nike.title,
+    img : nike.img,
+     price : nike.discountPrice,
+    quantity: Number(quantity),size,    
+    brandname: nike.brandName
+  }; 
+  dispatch(addToCart(itemToAdd));
+  alert("Product added to cart");
+}
   return (
     <>
     <div className="min-h-screen bg-gray-100 p-8">
@@ -22,7 +40,7 @@ const Nike1 = () => {
       
         <div className=" bg-white">
           <img
-            src={nike. image} 
+            src={nike.img} 
             alt={nike.title}
             className="w-2xl h-150  object-contain rounded-t-lg md:rounded-l-lg"
           />
@@ -34,7 +52,7 @@ const Nike1 = () => {
           
           <p>{nike.rating}</p>
          
-            <span className="text-green-600 text-2xl font-semibold">₹{nike.price}</span>
+            <span className="text-green-600 text-2xl font-semibold">₹{nike.discountPrice}</span>
         
           <p className="text-gray-600 mb-6">{nike.description}</p>
 
@@ -69,7 +87,7 @@ const Nike1 = () => {
 
          
           <div className="flex gap-4 mb-6">
-            <button className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">
+            <button onClick={handleAddToCart} className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">
               Add to Cart
             </button>
             <button className="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700 transition">

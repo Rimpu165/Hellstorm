@@ -28,7 +28,7 @@ export const tshirts = [
     rating: 4.5,
     originalPrice: 999,
     discountPrice: 599, 
-    image: TS1,
+    img: TS1,
     description: "Timeless crew neck t-shirt made from soft cotton."
   },
   {
@@ -37,7 +37,7 @@ export const tshirts = [
     rating: 4.6,
     originalPrice: 1099,
     discountPrice: 549, 
-    image: TS2,
+    img: TS2,
     description: "Bold graphic design for a trendy casual look."
   },
   {
@@ -46,7 +46,7 @@ export const tshirts = [
     rating: 4.4,
     originalPrice: 899,
     discountPrice: 449, 
-    image: TS3,
+    img: TS3,
     description: "Comfortable v-neck tee ideal for everyday wear."
   },
   {
@@ -55,7 +55,7 @@ export const tshirts = [
     rating: 4.7,
     originalPrice: 1299,
     discountPrice: 649,
-    image: TS4,
+    img: TS4,
     description: "Laid-back oversized fit with urban edge."
   },
   {
@@ -64,7 +64,7 @@ export const tshirts = [
     rating: 4.6,
     originalPrice: 1199,
     discountPrice: 599, 
-    image: TS5,
+    img: TS5,
     description: "Trendy tie-dye print on a relaxed fit t-shirt."
   },
   {
@@ -73,7 +73,7 @@ export const tshirts = [
     rating: 4.5,
     originalPrice: 1099,
     discountPrice: 659, 
-    image: TS6,
+    img: TS6,
     description: "Buttoned Henley tee for a stylish casual look."
   },
   {
@@ -82,7 +82,7 @@ export const tshirts = [
     rating: 4.4,
     originalPrice: 999,
     discountPrice: 499, 
-    image: TS7,
+    img: TS7,
     description: "Soft stretch fabric for a snug, flattering fit."
   },
   {
@@ -91,7 +91,7 @@ export const tshirts = [
     rating: 4.3,
     originalPrice: 1099,
     discountPrice: 659, 
-    image: TS8,
+    img: TS8,
     description: "Simple design with a utility pocket accent."
   },
   {
@@ -100,7 +100,7 @@ export const tshirts = [
     rating: 4.5,
     originalPrice: 999,
     discountPrice: 599,
-    image: TS9,
+    img: TS9,
     description: "Classic striped tee with a nautical vibe."
   },
   {
@@ -109,7 +109,7 @@ export const tshirts = [
     rating: 4.7,
     originalPrice: 1199,
     discountPrice: 479,
-    image: TS10,
+    img: TS10,
     description: "Sporty colorblock tee designed for movement."
   },
   {
@@ -118,7 +118,7 @@ export const tshirts = [
     rating: 4.6,
     originalPrice: 899,
     discountPrice: 449, 
-    image: TS11,
+    img: TS11,
     description: "Trendy cropped silhouette for a modern twist."
   },
   {
@@ -127,7 +127,7 @@ export const tshirts = [
     rating: 4.3,
     originalPrice: 999,
     discountPrice: 499, 
-    image: TS12,
+    img: TS12,
     description: "Statement text graphic for bold expression."
   },
   {
@@ -136,7 +136,7 @@ export const tshirts = [
     rating: 4.4,
     originalPrice: 1099,
     discountPrice: 659, 
-    image: TS13,
+    img: TS13,
     description: "Longline tee with textured slub knit fabric."
   },
   {
@@ -145,7 +145,7 @@ export const tshirts = [
     rating: 4.6,
     originalPrice: 1199,
     discountPrice: 599, 
-    image: TS14,
+    img: TS14,
     description: "Faded vintage wash adds laid-back charm."
   },
   {
@@ -154,7 +154,7 @@ export const tshirts = [
     rating: 4.5,
     originalPrice: 999,
     discountPrice: 399, 
-    image: TS15,
+    img: TS15,
     description: "Ideal for workouts or casual warm weather wear."
   },
   {
@@ -163,7 +163,7 @@ export const tshirts = [
     rating: 4.8,
     originalPrice: 1299,
     discountPrice: 779, 
-    image: TS16,
+    img: TS16,
     description: "Sustainable cotton tee with a soft, breathable feel."
   },
   {
@@ -172,16 +172,16 @@ export const tshirts = [
     rating: 4.4,
     originalPrice: 1099,
     discountPrice: 549, 
-    image: TS17,
+    img: TS17,
     description: "Bold patterns cover this head-turning tee."
   },
-  {
+  {   
     id: 18,
     title: "Knotted Front Tee",
     rating: 4.5,
     originalPrice: 999,
     discountPrice: 599, 
-    image: TS18,
+    img: TS18,
     description: "Knotted design adds shape and interest to this basic."
   },
   {
@@ -190,7 +190,7 @@ export const tshirts = [
     rating: 4.6,
     originalPrice: 1199,
     discountPrice: 719, 
-    image: TS1,
+    img: TS1,
     description: "Asymmetrical hem for a modern, edgy twist."
   },
   {
@@ -199,11 +199,10 @@ export const tshirts = [
     rating: 4.5,
     originalPrice: 1099,
     discountPrice: 659, 
-    image: TS2,
+    img: TS2,
     description: "Subtle contrast stitching elevates a basic tee."
   }
 ];
-
 const TShirt = () => {
   return (
     <>
@@ -212,7 +211,7 @@ const TShirt = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {tshirts.map((shirt) => (
           <div key={shirt.id} className="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition-shadow">
-            <img src={shirt.image} alt={shirt.title} className="w-full h-60 object-cover rounded-md mb-4" />
+            <img src={shirt.img} alt={shirt.title} className="w-full h-60 object-cover rounded-md mb-4" />
             <h3 className="text-lg font-semibold text-gray-800">{shirt.title}</h3>
             <p className="text-sm text-gray-600 mb-2">{shirt.description}</p>
             <div className="flex justify-between items-center">
@@ -221,7 +220,7 @@ const TShirt = () => {
                 <span className="text-lg text-pink-600 font-semibold">₹{shirt.discountPrice}</span>
               </div>
               <span className="text-yellow-500 text-sm font-medium">⭐⭐⭐⭐ {shirt.rating}</span>
-             
+
             </div>
              <Link to={`/Tshirt/${shirt.id}`}> <button className="mt-4 w-full py-2 bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500 text-white rounded hover:bg-pink-700">
               Shop Now

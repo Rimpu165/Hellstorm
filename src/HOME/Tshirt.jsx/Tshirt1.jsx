@@ -15,33 +15,30 @@ const Tshirt1 = () => {
   const handleSizeChange = (e) => setSize(e.target.value);
   const handleQuantityChange = (e) => setQuantity(e.target.value);
     const dispatch = useDispatch()
-  console.log("product",product);
-
   
   const handleAddToCart = () => {   
   if (!size) {
     alert("Please select a size!");
     return;
   }
-  const itemToAdd={
+  const itemToAdd={ 
     id : product.id,
     title : product.title,
-    imgage : product.image,
+    img : product.img,
     price : product.discountPrice,
     quantity: Number(quantity),size,    
     brandname: product.brandName
-  };
+  }; 
   dispatch(addToCart(itemToAdd));
   alert("Product added to cart");
 }
-
   return (
     <div className="min-h-screen bg-gray-100 p-8">
       <div className="max-w-6xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden flex flex-col md:flex-row">
       
         <div className="md:w-1/2 bg-gray-200">
           <img
-            src={product.image}
+            src={product.img}
             alt={product.title}
             className="w-full h-full object-cover rounded-t-lg md:rounded-l-lg"
           />

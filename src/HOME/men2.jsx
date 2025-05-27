@@ -22,7 +22,6 @@ const Men2 = () => {
   const handleQuantityChange = (e) => setQuantity(e.target.value);
   const dispatch = useDispatch()
 
-  console.log("product",product);
 
   const handleAddToCart = () => {
   if (!size) {
@@ -43,10 +42,6 @@ const Men2 = () => {
   dispatch(addToCart(itemToAdd));
   toast.success("Product added to cart!");
 };
-
-console.log("product",product);
-
-  
 
   return (
     <div className="min-h-screen bg-gray-100 p-8">

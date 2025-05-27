@@ -8,8 +8,6 @@ import { Link } from 'react-router-dom';
 const Tops1 = () => {
     const {id}=useParams();
     const top=trendyTops.find((item) => item.id === Number(id))
-    console.log("pro",top);
-    
     const[size,setSize]=useState("")
     const [quantity, setQuantity] = useState(1);
     

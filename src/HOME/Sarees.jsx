@@ -26,7 +26,7 @@ export const trendySarees = [
       rating: 4.9,
       originalPrice: 4999,
       discountPrice: 3999,
-      image: S1,
+      img: S1,
       description: "Traditional Kanjivaram silk with rich zari work and vibrant hues."
     },
     {
@@ -35,7 +35,7 @@ export const trendySarees = [
       rating: 4.7,
       originalPrice: 3299,
       discountPrice: 2499,
-      image: S2,
+      img: S2,
       description: "Glamorous georgette saree adorned with delicate sequins."
     },
     {
@@ -44,7 +44,7 @@ export const trendySarees = [
       rating: 4.5,
       originalPrice: 1899,
       discountPrice: 1399,
-      image: S3,
+      img: S3,
       description: "Comfortable and elegant cotton saree with ethnic prints."
     },
     {
@@ -53,7 +53,7 @@ export const trendySarees = [
       rating: 4.6,
       originalPrice: 2599,
       discountPrice: 1999,
-      image: S4,
+      img: S4,
       description: "Lightweight chiffon saree with stunning ombre shades."
     },
     {
@@ -62,7 +62,7 @@ export const trendySarees = [
       rating: 4.8,
       originalPrice: 4499,
       discountPrice: 3499,
-      image: S5,
+      img: S5,
       description: "Regal Banarasi saree featuring intricate brocade patterns."
     },
     {
@@ -71,7 +71,7 @@ export const trendySarees = [
       rating: 4.4,
       originalPrice: 2799,
       discountPrice: 2099,
-      image: S6,
+      img: S6,
       description: "Breathable linen handloom saree with artisanal touch."
     },
     {
@@ -80,7 +80,7 @@ export const trendySarees = [
       rating: 4.6,
       originalPrice: 3899,
       discountPrice: 2999,
-      image: S7,
+      img: S7,
       description: "Sheer organza fabric highlighted with elegant embroidery."
     },
     {
@@ -89,7 +89,7 @@ export const trendySarees = [
       rating: 4.5,
       originalPrice: 3599,
       discountPrice: 2699,
-      image: S8,
+      img: S8,
       description: "Contemporary net saree embellished with stone details."
     },
     {
@@ -98,7 +98,7 @@ export const trendySarees = [
       rating: 4.9,
       originalPrice: 5599,
       discountPrice: 4499,
-      image: S9,
+      img: S9,
       description: "Iconic Paithani weave with a luxurious silk finish."
     },
     {
@@ -107,7 +107,7 @@ export const trendySarees = [
       rating: 4.3,
       originalPrice: 2199,
       discountPrice: 1699,
-      image: S10,
+      img: S10,
       description: "Stylish crepe fabric with contemporary prints."
     },
     {
@@ -116,7 +116,7 @@ export const trendySarees = [
       rating: 4.7,
       originalPrice: 4099,
       discountPrice: 3199,
-      image: S11,
+      img: S11,
       description: "Natural Tussar silk known for its rich texture and sheen."
     },
     {
@@ -125,7 +125,7 @@ export const trendySarees = [
       rating: 4.4,
       originalPrice: 2899,
       discountPrice: 2199,
-      image: S12,
+      img: S12,
       description: "Trendy satin saree with stylish ruffle borders."
     },
     {
@@ -134,7 +134,7 @@ export const trendySarees = [
       rating: 4.5,
       originalPrice: 3399,
       discountPrice: 2499,
-      image: S13,
+      img: S13,
       description: "Perfect blend of silk and shimmer for party wear."
     },
     {
@@ -143,7 +143,7 @@ export const trendySarees = [
       rating: 4.6,
       originalPrice: 2999,
       discountPrice: 2299,
-      image: S14,
+      img: S14,
       description: "Vibrant Patola-inspired digital prints on soft fabric."
     },
     {
@@ -152,7 +152,7 @@ export const trendySarees = [
       rating: 4.7,
       originalPrice: 4999,
       discountPrice: 3899,
-      image: S15,
+      img: S15,
       description: "Luxurious velvet saree with intricate embellishments."
     },
     {
@@ -161,7 +161,7 @@ export const trendySarees = [
       rating: 4.8,
       originalPrice: 3499,
       discountPrice: 2799,
-      image: S1,
+      img: S1,
       description: "Elegant hand-embroidered Chikankari work on pastel hues."
     },
     {
@@ -170,7 +170,7 @@ export const trendySarees = [
       rating: 4.4,
       originalPrice: 2499,
       discountPrice: 1899,
-      image: S2,
+      img: S2,
       description: "Lightweight and breezy Kota Doria with traditional charm."
     },
     {
@@ -179,7 +179,7 @@ export const trendySarees = [
       rating: 4.5,
       originalPrice: 3899,
       discountPrice: 2999,
-      image: S3,
+      img: S3,
       description: "Designer saree with cascading ruffles and glam appeal."
     },
     {
@@ -188,7 +188,7 @@ export const trendySarees = [
       rating: 4.6,
       originalPrice: 4199,
       discountPrice: 3299,
-      image: S4,
+      img: S4,
       description: "Elegant organza paired with luxurious silk lining."
     },
     {
@@ -197,7 +197,7 @@ export const trendySarees = [
       rating: 4.3,
       originalPrice: 1999,
       discountPrice: 1499,
-      image: S5,
+      img: S5,
       description: "Modern printed saree blending Indo-western aesthetics."
     }
   ];
@@ -213,7 +213,7 @@ const Sarees = () => {
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
       {trendySarees.map((item) => (
         <div key={item.id} className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition">
-          <img src={item.image} alt={item.title} className="w-full h-64 object-cover" />
+          <img src={item.img} alt={item.title} className="w-full h-64 object-cover" />
           <div className="p-4 ">
             <h3 className="text-lg font-semibold text-gray-800">{item.title}</h3>
             <p className="text-sm text-gray-600 mt-1">{item.description.slice(0,20)}...</p>

@@ -16,13 +16,7 @@ const Navbar = () => {
     const user = localStorage.getItem("LoginUser");
     setIsLoggedIn(!!user);
   }, []);
-
-  console.log("isLoggedIn", isLoggedIn);
-  console.log("open",open);
    const count = useSelector((state) => state.cart.items.length);
-   console.log("count",count)
-
-
   return (
     <nav className="bg-black text-white px-6 py-4 shadow-lg">
       <div className="flex items-center justify-between">
@@ -55,10 +49,13 @@ const Navbar = () => {
             placeholder="Search..."
             className="px-10 py-1 rounded-md text-black hidden md:block bg-white "
           />
-          <Link to="/AddtoCart" className="text-2xl hover:text-gray-400 flex ">
-            <FaShoppingCart /> 
-           <span className=" text-white text-[13px] w-4 h-5 font-bold rounded-full  bg-red-600 pl-1 "> {count}</span>
-          </Link>
+        <Link to="/AddtoCart" className="relative text-2xl hover:text-gray-400">
+  
+  <span className="absolute -top-2 -right-2 bg-red-600 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full font-bold">
+    {count}
+  </span> 
+  <FaShoppingCart />
+</Link>
           <div className="relative inline-block text-left">
   {isLoggedIn ? (
     <>

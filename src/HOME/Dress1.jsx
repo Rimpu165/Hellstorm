@@ -3,6 +3,8 @@ import { useParams } from 'react-router-dom'
 import { dress } from './Dress';
 import Footer from '../log/Footer';
 import { Link } from 'react-router-dom';
+import { addToCart } from '../redux/slice';
+import { useDispatch } from 'react-redux';
 
 
 const Dress1 = () => {
@@ -15,6 +17,23 @@ const Dress1 = () => {
     
   const handleSizeChange = (e) => setSize(e.target.value);
   const handleQuantityChange = (e) => setQuantity(e.target.value);
+    const dispatch = useDispatch()
+ const handleAddToCart = () => {   
+  if (!size) {
+    alert("Please select a size!");
+    return;
+  }
+  const itemToAdd={
+      id : top.id,
+      title : top.title,
+      img : top.img,
+      price : top.discountPrice,
+      quantity: Number(quantity),size,    
+      brandname: top.brandName
+    }; 
+    dispatch(addToCart(itemToAdd));
+    alert("Product added to cart");
+  }
   return (
     <>
     <div className="min-h-screen bg-gray-100 p-8">
@@ -22,7 +41,7 @@ const Dress1 = () => {
       
         <div className=" bg-white">
           <img
-            src={top. image} 
+            src={top. img} 
             alt={top.title}
             className="w-2xl h-150  object-contain rounded-t-lg md:rounded-l-lg"
           />
@@ -69,7 +88,7 @@ const Dress1 = () => {
 
          
           <div className="flex gap-4 mb-6">
-            <button className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">
+            <button onClick={handleAddToCart} className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">
               Add to Cart
             </button>
             <button className="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700 transition">

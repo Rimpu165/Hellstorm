@@ -29,7 +29,7 @@ export const dress = [
       rating: 4.8,
       originalPrice: 2299,
       discountPrice: 1699,
-      image: K1,
+      img: K1,
       description: "A flowy floral maxi dress perfect for summer days."
     },
     {
@@ -38,7 +38,7 @@ export const dress = [
       rating: 4.6,
       originalPrice: 1999,
       discountPrice: 1499,
-      image: K2,
+      img: K2,
       description: "Chic and figure-hugging, ideal for evening outings."
     },
     {
@@ -47,7 +47,7 @@ export const dress = [
       rating: 4.5,
       originalPrice: 1899,
       discountPrice: 1399,
-      image: K3,
+      img: K3,
       description: "Classic A-line sundress for a breezy daytime look."
     },
     {
@@ -56,7 +56,7 @@ export const dress = [
       rating: 4.7,
       originalPrice: 2099,
       discountPrice: 1599,
-      image: K4,
+      img: K4,
       description: "Flattering wrap-style dress with a stylish silhouette."
     },
     {
@@ -65,7 +65,7 @@ export const dress = [
       rating: 4.4,
       originalPrice: 2399,
       discountPrice: 1799,
-      image: K5,
+      img: K5,
       description: "Elegant ruffles add charm to this flowy dress."
     },
     {
@@ -74,7 +74,7 @@ export const dress = [
       rating: 4.8,
       originalPrice: 2499,
       discountPrice: 1899,
-      image: K6,
+      img: K6,
       description: "Feminine fit and flare silhouette with lace overlay."
     },
     {
@@ -83,7 +83,7 @@ export const dress = [
       rating: 4.5,
       originalPrice: 2199,
       discountPrice: 1599,
-      image: K7,
+      img: K7,
       description: "Make a statement with this off-shoulder cocktail look."
     },
     {
@@ -92,7 +92,7 @@ export const dress = [
       rating: 4.6,
       originalPrice: 1999,
       discountPrice: 1499,
-      image: K8,
+      img: K8,
       description: "Bohemian smocked dress with relaxed fit and flair."
     },
     {
@@ -101,7 +101,7 @@ export const dress = [
       rating: 4.7,
       originalPrice: 2599,
       discountPrice: 1999,
-      image: K9,
+      img: K9,
       description: "Sleek satin slip dress for an effortlessly glam look."
     },
     {
@@ -110,7 +110,7 @@ export const dress = [
       rating: 4.3,
       originalPrice: 1799,
       discountPrice: 1299,
-      image: K10,
+      img: K10,
       description: "Casual yet polished shirt dress with waist tie."
     },
     {
@@ -119,7 +119,7 @@ export const dress = [
       rating: 4.4,
       originalPrice: 1899,
       discountPrice: 1399,
-      image: T11,
+      img: T11,
       description: "Statement sleeves elevate this trendy mini dress."
     },
     {
@@ -128,7 +128,7 @@ export const dress = [
       rating: 4.6,
       originalPrice: 2099,
       discountPrice: 1599,
-      image: T12,
+      img: T12,
       description: "Flattering empire waist dress for all-day comfort."
     },
     {
@@ -137,7 +137,7 @@ export const dress = [
       rating: 4.5,
       originalPrice: 1999,
       discountPrice: 1499,
-      image: T13,
+      img: T13,
       description: "Minimalist slip dress with delicate straps."
     },
     {
@@ -146,7 +146,7 @@ export const dress = [
       rating: 4.7,
       originalPrice: 2499,
       discountPrice: 1899,
-      image: T14,
+      img: T14,
       description: "Edgy one-shoulder design with asymmetrical hem."
     },
     {
@@ -155,7 +155,7 @@ export const dress = [
       rating: 4.6,
       originalPrice: 2399,
       discountPrice: 1799,
-      image: T15,
+      img: T15,
       description: "Boho-inspired prints in a flowy maxi silhouette."
     },
     {
@@ -164,7 +164,7 @@ export const dress = [
       rating: 4.8,
       originalPrice: 2699,
       discountPrice: 2099,
-      image: T16,
+      img: T16,
       description: "Sparkling sequins make this dress party-ready."
     },
     {
@@ -173,7 +173,7 @@ export const dress = [
       rating: 4.3,
       originalPrice: 1899,
       discountPrice: 1399,
-      image: T17,
+      img: T17,
       description: "Cute mini wrap dress with an adjustable tie."
     },
     {
@@ -182,7 +182,7 @@ export const dress = [
       rating: 4.5,
       originalPrice: 2199,
       discountPrice: 1599,
-      image: T18,
+      img: T18,
       description: "Dramatic high-low hem adds flair to any event."
     },
     {
@@ -191,7 +191,7 @@ export const dress = [
       rating: 4.6,
       originalPrice: 2499,
       discountPrice: 1899,
-      image: T19,
+      img: T19,
       description: "Alluring backless halter design with sleek finish."
     },
     {
@@ -200,7 +200,7 @@ export const dress = [
       rating: 4.4,
       originalPrice: 1999,
       discountPrice: 1499,
-      image: T20,
+      img: T20,
       description: "Curve-enhancing ruched fabric in a bodycon fit."
     }
   ];
@@ -216,7 +216,7 @@ const Dress = () => {
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
       {dress.map((item) => (
         <div key={item.id} className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition">
-          <img src={item.image} alt={item.title} className="w-full h-64 object-cover" />
+          <img src={item.img} alt={item.title} className="w-full h-64 object-cover" />
           <div className="p-4 ">
             <h3 className="text-lg font-semibold text-gray-800">{item.title}</h3>
             <p className="text-sm text-gray-600 mt-1">{item.description.slice(0,20)}...</p>

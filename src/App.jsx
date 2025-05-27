@@ -50,19 +50,25 @@ import Dress1 from "./HOME/Dress1";
 import Sarees from "./HOME/Sarees";
 import Sarees1 from "./HOME/Sarees1";
 
+
+
 import ProtectedRoute from "./log/protect";  
 import AddtoCart from "./log/Add";
 import TShirt from "./HOME/Tshirt.jsx/TShirt";
-import SportsShoes from "./HOME/Sports/Sports";
 import Shirt from "./HOME/Shirts/Shirt";
 import Profile from "./log/Profile";
 import Tshirt1 from "./HOME/Tshirt.jsx/Tshirt1";
 import Checkout from "./log/Checkout";
+import Sports1 from "./HOME/Sports/Sports1";
+import SportsShoe from "./HOME/Sports/Sports";
+import Shirt1 from "./HOME/Shirts/Shirt1";
+import Jean from "./HOME/Jeans/Jean";
+import Jean1 from "./HOME/Jeans/Jean1";
+import Kurtas from "./HOME/Kurtas/Kurtas";
+import Kurtas1 from "./HOME/Kurtas/Kurtas1";
 
 const App = () => {
  const isAuthenticated = !!localStorage.getItem("user");
-
-  
   return ( 
     <>
       <BrowserRouter>
@@ -96,17 +102,33 @@ const App = () => {
 
           <Route path="/kurti" element={<Kurti/>}/>
           <Route path="/kurti/:id" element={<Kurti1/>}/>
+
           <Route path="tops" element={<Tops/>}/> 
           <Route path="/tops/:id" element={<Tops1/>}/>
+
           <Route path="dress" element={<Dress/>}/> 
           <Route path="/dress/:id" element={<Dress1/>}/>
+
           <Route path="sarees" element={<Sarees/>}/>
           <Route path="/sarees/:id" element={<Sarees1/>}/>
 
            <Route path="/tshirt" element={<TShirt/>}/>
-           <Route path="/shoes" element={<SportsShoes/>}/>
+            <Route path="/tshirt/:id" element={<Tshirt1/>}/>
+
+           <Route path="/shoe" element={<SportsShoe/>}/>
+           <Route path="/shoe/:id" element={<Sports1/>}/>
+
            <Route path="/shirt" element={<Shirt/>}/>
-           <Route path="/tshirt/:id" element={<Tshirt1/>}/>
+            <Route path="/shirt/:id" element={<Shirt1/>}/>
+
+
+           <Route path="/jean" element={<Jean/>}/>
+            <Route path="/jean/:id" element={<Jean1/>}/>
+
+            <Route path="/kurtas" element={<Kurtas/>}/>
+             <Route path="/kurtas/:id" element={<Kurtas1/>}/>
+            
+          
 
           <Route path="/Login" element={<Login/>} />
 

@@ -22,7 +22,7 @@ export const sportsShoes = [
     rating: 4.7,
     originalPrice: 2999,
     discountPrice: 1999,
-    image: SS1,
+    img: SS1,
     description: "Engineered spikes for enhanced grip and performance on turf."
   },
   {
@@ -31,7 +31,7 @@ export const sportsShoes = [
     rating: 4.6,
     originalPrice: 2499,
     discountPrice: 1499,
-    image: SS2,
+    img: SS2,
     description: "Cushioned sole for long-distance running and comfort."
   },
   {
@@ -40,7 +40,7 @@ export const sportsShoes = [
     rating: 4.5,
     originalPrice: 2199,
     discountPrice: 1399,
-    image: SS3,
+    img: SS3,
     description: "Non-marking grip for quick lateral movement on court."
   },
   {
@@ -49,7 +49,7 @@ export const sportsShoes = [
     rating: 4.8,
     originalPrice: 3499,
     discountPrice: 2299,
-    image: SS4,
+    img: SS4,
     description: "Firm ground cleats for excellent traction and power."
   },
   {
@@ -58,7 +58,7 @@ export const sportsShoes = [
     rating: 4.6,
     originalPrice: 1999,
     discountPrice: 1299,
-    image: SS5,
+    img: SS5,
     description: "Built for grip and agility on dusty kabaddi courts."
   },
   {
@@ -67,7 +67,7 @@ export const sportsShoes = [
     rating: 4.4,
     originalPrice: 1799,
     discountPrice: 999,
-    image: SS6,
+    img: SS6,
     description: "Multipurpose trainer for gym, running and sports drills."
   },
   {
@@ -76,7 +76,7 @@ export const sportsShoes = [
     rating: 4.5,
     originalPrice: 2699,
     discountPrice: 1699,
-    image: SS7,
+    img: SS7,
     description: "Built for off-road adventures with rugged outsoles."
   },
   {
@@ -85,7 +85,7 @@ export const sportsShoes = [
     rating: 4.3,
     originalPrice: 2399,
     discountPrice: 1499,
-    image: SS8,
+    img: SS8,
     description: "Optimized for quick pivots and lateral stability."
   },
   {
@@ -94,7 +94,7 @@ export const sportsShoes = [
     rating: 4.6,
     originalPrice: 2199,
     discountPrice: 1399,
-    image: SS9,
+    img: SS9,
     description: "Flat outsole for indoor turf with superior control."
   },
   {
@@ -103,7 +103,7 @@ export const sportsShoes = [
     rating: 4.7,
     originalPrice: 2499,
     discountPrice: 1599,
-    image: SS10,
+    img: SS10,
     description: "Ankle support and grip for wrestling mats."
   },
   {
@@ -112,7 +112,7 @@ export const sportsShoes = [
     rating: 4.6,
     originalPrice: 3299,
     discountPrice: 1999,
-    image: SS11,
+    img: SS11,
     description: "High ankle support and bounce for dunk-ready performance."
   },
   {
@@ -121,7 +121,7 @@ export const sportsShoes = [
     rating: 4.5,
     originalPrice: 3599,
     discountPrice: 2499,
-    image: SS4,
+    img: SS4,
     description: "Streamlined design for beginners and pros alike."
   },
   {
@@ -130,7 +130,7 @@ export const sportsShoes = [
     rating: 4.7,
     originalPrice: 2999,
     discountPrice: 2099,
-    image: SS3,
+    img: SS3,
     description: "Water-resistant hiking boots for rocky trails."
   },
   {
@@ -139,7 +139,7 @@ export const sportsShoes = [
     rating: 4.3,
     originalPrice: 1499,
     discountPrice: 899,
-    image: SS1,
+    img: SS1,
     description: "Minimal sole, ideal for yoga, pilates, and barefoot feel."
   },
   {
@@ -148,7 +148,7 @@ export const sportsShoes = [
     rating: 4.4,
     originalPrice: 1999,
     discountPrice: 1199,
-    image: SS5,
+    img: SS5,
     description: "Lightweight indoor cricket shoes with strong grip."
   },
   {
@@ -157,7 +157,7 @@ export const sportsShoes = [
     rating: 4.6,
     originalPrice: 2499,
     discountPrice: 1499,
-    image: SS10,
+    img: SS10,
     description: "Sturdy base and flexibility for intense workouts."
   },
   {
@@ -166,7 +166,7 @@ export const sportsShoes = [
     rating: 4.7,
     originalPrice: 2799,
     discountPrice: 1699,
-    image: SS7,
+    img: SS7,
     description: "Designed for endurance and long-distance races."
   },
   {
@@ -175,7 +175,7 @@ export const sportsShoes = [
     rating: 4.5,
     originalPrice: 2099,
     discountPrice: 1299,
-    image: SS2,
+    img: SS2,
     description: "Ultra-light and shock-absorbing sole for agility."
   },
   {
@@ -184,7 +184,7 @@ export const sportsShoes = [
     rating: 4.6,
     originalPrice: 2399,
     discountPrice: 1499,
-    image: SS7,
+    img: SS7,
     description: "Turf-specific studs for artificial grass surfaces."
   },
   {
@@ -193,12 +193,12 @@ export const sportsShoes = [
     rating: 4.4,
     originalPrice: 1899,
     discountPrice: 999,
-    image: SS2,
+    img: SS2,
     description: "Strong toe grip and side support for aggressive moves."
   }
 ];
 
-const SportsShoes = () => {
+const SportsShoe = () => {
   return (
     <>
       <div className="bg-gray-50 py-6 px-4">
@@ -208,7 +208,7 @@ const SportsShoes = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {sportsShoes.map((shoe) => (
             <div key={shoe.id} className="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition-shadow">
-              <img src={shoe.image} alt={shoe.title} className="w-full h-60 object-cover rounded-md mb-4" />
+              <img src={shoe.img} alt={shoe.title} className="w-full h-60 object-cover rounded-md mb-4" />
               <h3 className="text-lg font-semibold text-gray-800">{shoe.title}</h3>
               <p className="text-sm text-gray-600 mb-2">{shoe.description.slice(0,30)}...</p>
               <div className="flex justify-between items-center">
@@ -218,7 +218,7 @@ const SportsShoes = () => {
                 </div>
                 <span className="text-yellow-500 text-sm font-medium">⭐ {shoe.rating}</span>
               </div>
-              <Link to={`/shoe/${shoe.id}`}>
+               <Link to={`/shoe/${shoe.id}`}>
                 <button className="mt-4 w-full py-2 bg-gradient-to-r from-green-500 via-blue-500 to-green-500 text-white rounded hover:bg-pink-700">
                   Shop Now
                 </button>
@@ -232,4 +232,4 @@ const SportsShoes = () => {
   );
 };
 
-export default SportsShoes;
+export default SportsShoe;

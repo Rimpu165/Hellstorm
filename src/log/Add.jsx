@@ -2,6 +2,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { removeFromCart, updateQuantity } from '../redux/slice';
 import Footer from './Footer';
 import { Link } from 'react-router-dom';
+import Logo from "../assets/log.png"
 
 const AddtoCart = () => {
   const dispatch = useDispatch();
@@ -42,11 +43,13 @@ const AddtoCart = () => {
                 key={`${item.id}-${item.size}`}
                 className="flex items-center gap-4 border-b py-4"
               >
-                <img
-                  src={item.img }
-                  alt={item.name}
-                  className="w-24 h-24 object-cover rounded"
-                />
+                <Link to={`/men/${item.id}`}>
+                  <img
+                    src={item.img}
+                    alt={item.name}
+                    className="w-24 h-24 object-cover rounded"
+                  />
+                </Link>
                 <div className="flex-1">
                   <h2 className="font-semibold text-lg">{item.name}</h2>
                   {item.size && (
@@ -55,7 +58,7 @@ const AddtoCart = () => {
                   <p className="text-gray-500">Price: ₹{item.price}</p>
                   <div className="flex items-center gap-2 mt-2">
                     <button
-                      onClick={() => 
+                      onClick={() =>
                         handleQuantityChange(item.id, item.size, -1)
                       }
                       className="px-2 py-1 bg-gray-200 rounded hover:bg-gray-300"
@@ -85,7 +88,6 @@ const AddtoCart = () => {
               </div>
             ))}
           </div>
-
           <div className="w-full lg:w-1/3 bg-gray-100 p-6 rounded-lg shadow">
             <h2 className="text-xl font-bold mb-4">Order Summary</h2>
             <div className="flex justify-between py-2 border-b">
@@ -100,15 +102,17 @@ const AddtoCart = () => {
               <span>Total</span>
               <span>₹{total}</span>
             </div>
-             <Link to="/checkout"> <button className="mt-6 w-full bg-black text-white py-3 rounded hover:bg-gray-800 transition">
-              Proceed to Checkout
-            </button> </Link> 
+            <Link to="/checkout">
+              <button className="mt-6 w-full bg-black text-white py-3 rounded hover:bg-gray-800 transition">
+                Proceed to Checkout
+              </button>
+            </Link>
+            <img className='h-75 pl-12 pt-10 ' src={Logo} alt="" />
           </div>
         </div>
       </div>
-      <Footer />
+      <Footer />  
     </>
   );
 };
-
 export default AddtoCart;

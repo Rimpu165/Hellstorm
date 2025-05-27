@@ -23,26 +23,26 @@ import { Link } from "react-router-dom";
 import Footer from "../log/Footer";
 
 export const tommyProducts = [
-  { id: 1, title: "Tommy Hilfiger Men's Polo Shirt", price: 2499, description: "Classic polo shirt with signature logo.", image: T1, rating: "4.6 ★★★★½" },
-  { id: 2, title: "Tommy Hilfiger Women's T-Shirt", price: 1799, description: "Soft cotton tee with a stylish fit.", image: T2, rating: "4.4 ★★★★☆" },
-  { id: 3, title: "Tommy Hilfiger Slim Fit Jeans", price: 2999, description: "Modern slim fit jeans with a sleek design.", image: T3, rating: "4.3 ★★★★☆" },
-  { id: 4, title: "Tommy Hilfiger Quilted Jacket", price: 4999, description: "Warm and stylish quilted jacket for cold days.", image: T4, rating: "4.7 ★★★★½" },
-  { id: 5, title: "Tommy Hilfiger Chino Pants", price: 2399, description: "Comfortable chinos with a perfect fit.", image: T5, rating: "4.5 ★★★★½" },
-  { id: 6, title: "Tommy Hilfiger Hoodie", price: 2799, description: "Soft fleece hoodie with a relaxed fit.", image: T6, rating: "4.2 ★★★★☆" },
-  { id: 7, title: "Tommy Hilfiger Jacket", price: 4499, description: "Lightweight and versatile jacket for all occasions.", image: T7, rating: "4.6 ★★★★½" },
-  { id: 8, title: "Tommy Hilfiger Sneakers", price: 3999, description: "Stylish sneakers for casual and sporty looks.", image: T8, rating: "4.4 ★★★★☆" },
-  { id: 9, title: "Tommy Hilfiger Leather Wallet", price: 1599, description: "Premium leather wallet with a timeless design.", image: T9, rating: "4.3 ★★★★☆" },
-  { id: 10, title: "Tommy Hilfiger Leather Belt", price: 1299, description: "Classic leather belt with the signature logo.", image: T10, rating: "4.5 ★★★★½" },
-  { id: 11, title: "Tommy Hilfiger Sweatshirt", price: 2299, description: "Cozy sweatshirt with the Hilfiger logo.", image: T11, rating: "4.4 ★★★★☆" },
-  { id: 12, title: "Tommy Hilfiger Tracksuit", price: 3499, description: "Sporty tracksuit for comfort and style.", image: T12, rating: "4.3 ★★★★☆" },
-  { id: 13, title: "Tommy Hilfiger Duffel Bag", price: 2499, description: "Spacious duffel bag with a stylish look.", image: T13, rating: "4.2 ★★★★☆" },
-  { id: 14, title: "Tommy Hilfiger Watch", price: 5999, description: "Sleek and stylish watch for everyday wear.", image: T14, rating: "4.7 ★★★★½" },
-  { id: 15, title: "Tommy Hilfiger Sunglasses", price: 1999, description: "Trendy sunglasses with UV protection.", image: T15, rating: "4.5 ★★★★½" },
-  { id: 16, title: "Tommy Hilfiger Sneakers for Women", price: 3599, description: "Fashionable sneakers with a comfortable fit.", image: T16, rating: "4.3 ★★★★☆" },
-  { id: 17, title: "Tommy Hilfiger Men’s Dress Shirt", price: 2899, description: "Classic dress shirt for formal and business wear.", image: T17, rating: "4.6 ★★★★½" },
-  { id: 18, title: "Tommy Hilfiger Backpack", price: 2799, description: "Spacious and stylish backpack for everyday use.", image: T18, rating: "4.4 ★★★★☆" },
-  { id: 19, title: "Tommy Hilfiger Beanie", price: 999, description: "Warm beanie with a simple logo.", image: T19, rating: "4.2 ★★★★☆" },
-  { id: 20, title: "Tommy Hilfiger Women's Dress", price: 4999, description: "Elegant dress perfect for any occasion.", image: T20, rating: "4.5 ★★★★½" },
+  { id: 1, title: "Tommy Hilfiger Men's Polo Shirt", discountPrice: 2499, description: "Classic polo shirt with signature logo.", img: T1, rating: "4.6 ★★★★½" },
+  { id: 2, title: "Tommy Hilfiger Women's T-Shirt", discountPrice: 1799, description: "Soft cotton tee with a stylish fit.", img: T2, rating: "4.4 ★★★★☆" },
+  { id: 3, title: "Tommy Hilfiger Slim Fit Jeans", discountPrice: 2999, description: "Modern slim fit jeans with a sleek design.", img: T3, rating: "4.3 ★★★★☆" },
+  { id: 4, title: "Tommy Hilfiger Quilted Jacket", discountPrice: 4999, description: "Warm and stylish quilted jacket for cold days.", img: T4, rating: "4.7 ★★★★½" },
+  { id: 5, title: "Tommy Hilfiger Chino Pants", discountPrice: 2399, description: "Comfortable chinos with a perfect fit.", img: T5, rating: "4.5 ★★★★½" },
+  { id: 6, title: "Tommy Hilfiger Hoodie", discountPrice: 2799, description: "Soft fleece hoodie with a relaxed fit.", img: T6, rating: "4.2 ★★★★☆" },
+  { id: 7, title: "Tommy Hilfiger Jacket", discountPrice: 4499, description: "Lightweight and versatile jacket for all occasions.", img: T7, rating: "4.6 ★★★★½" },
+  { id: 8, title: "Tommy Hilfiger Sneakers", discountPrice: 3999, description: "Stylish sneakers for casual and sporty looks.", img: T8, rating: "4.4 ★★★★☆" },
+  { id: 9, title: "Tommy Hilfiger Leather Wallet", discountPrice: 1599, description: "Premium leather wallet with a timeless design.", img: T9, rating: "4.3 ★★★★☆" },
+  { id: 10, title: "Tommy Hilfiger Leather Belt", discountPrice: 1299, description: "Classic leather belt with the signature logo.", img: T10, rating: "4.5 ★★★★½" },
+  { id: 11, title: "Tommy Hilfiger Sweatshirt", discountPrice: 2299, description: "Cozy sweatshirt with the Hilfiger logo.", img: T11, rating: "4.4 ★★★★☆" },
+  { id: 12, title: "Tommy Hilfiger Tracksuit", discountPrice: 3499, description: "Sporty tracksuit for comfort and style.", img: T12, rating: "4.3 ★★★★☆" },
+  { id: 13, title: "Tommy Hilfiger Duffel Bag", discountPrice: 2499, description: "Spacious duffel bag with a stylish look.", img: T13, rating: "4.2 ★★★★☆" },
+  { id: 14, title: "Tommy Hilfiger Watch", discountPrice: 5999, description: "Sleek and stylish watch for everyday wear.", img: T14, rating: "4.7 ★★★★½" },
+  { id: 15, title: "Tommy Hilfiger Sunglasses", discountPrice: 1999, description: "Trendy sunglasses with UV protection.", img: T15, rating: "4.5 ★★★★½" },
+  { id: 16, title: "Tommy Hilfiger Sneakers for Women", discountPrice: 3599, description: "Fashionable sneakers with a comfortable fit.", img: T16, rating: "4.3 ★★★★☆" },
+  { id: 17, title: "Tommy Hilfiger Men’s Dress Shirt", discountPrice: 2899, description: "Classic dress shirt for formal and business wear.", img: T17, rating: "4.6 ★★★★½" },
+  { id: 18, title: "Tommy Hilfiger Backpack", discountPrice: 2799, description: "Spacious and stylish backpack for everyday use.", img: T18, rating: "4.4 ★★★★☆" },
+  { id: 19, title: "Tommy Hilfiger Beanie", discountPrice: 999, description: "Warm beanie with a simple logo.", img: T19, rating: "4.2 ★★★★☆" },
+  { id: 20, title: "Tommy Hilfiger Women's Dress", discountPrice: 4999, description: "Elegant dress perfect for any occasion.", img: T20, rating: "4.5 ★★★★½" },
 ];
 
  const Tomy = () => {
@@ -60,7 +60,7 @@ export const tommyProducts = [
         >
           <Link to={`/tomy/${product.id}`}>
             <img
-              src={product.image}
+              src={product.img}
               alt={product.title}
               className="w-full h-56 object-contain"
             />
@@ -74,7 +74,7 @@ export const tommyProducts = [
               </div>
   
               <p className="text-xl font-bold text-blue-600 mb-2">
-                ₹{product.price}
+                ₹{product.discountPrice}
               </p>
   
               <p className="text-gray-700 text-sm mb-4">

@@ -28,161 +28,161 @@ export const nikeProducts = [
     {
       id: 1,
       title: "Nike Air Zoom Pegasus 39",
-      price: 5999,
+       discountPrice: 5999,
       description: "Responsive running shoes with lightweight support.",
-      image: N1,
+       img: N1,
       rating: "4.7 ★★★★½"
     },
     {
       id: 2,
       title: "Nike Sportswear Club Fleece Hoodie",
-      price: 3299,
+       discountPrice: 3299,
       description: "Soft fleece comfort for everyday wear.",
-      image: N2,
+       img: N2,
       rating: "4.6 ★★★★½"
     },
     {
       id: 3,
       title: "Nike Brasilia Training Duffel Bag",
-      price: 2499,
+       discountPrice: 2499,
       description: "Spacious and durable gym bag with multiple compartments.",
-      image: N3,
+       img: N3,
       rating: "4.5 ★★★★½"
     },
     {
       id: 4,
       title: "Nike Dri-FIT Legend T-Shirt",
-      price: 1499,
+       discountPrice: 1499,
       description: "Moisture-wicking tee for workouts or casual wear.",
-      image: N4,
+       img: N4,
       rating: "4.4 ★★★★☆"
     },
     {
       id: 5,
       title: "Nike Air Max SC",
-      price: 5299,
+       discountPrice: 5299,
       description: "Versatile everyday sneakers with classic Air Max style.",
-      image: N5,
+       img: N5,
       rating: "4.6 ★★★★½"
     },
     {
       id: 6,
       title: "Nike Heritage 86 Cap",
-      price: 999,
+       discountPrice: 999,
       description: "Classic cap with adjustable strap and embroidered swoosh.",
-      image: N6,
+       img: N6,
       rating: "4.3 ★★★★☆"
     },
     {
       id: 7,
       title: "Nike Pro 3/4 Training Tights",
-      price: 2699,
+       discountPrice: 2699,
       description: "Compression fit for support during training.",
-      image: N7,
+       img: N7,
       rating: "4.5 ★★★★½"
     },
     {
       id: 8,
       title: "Nike Revolution 6",
-      price: 3499,
+       discountPrice: 3499,
       description: "Comfortable running shoes with a soft foam midsole.",
-      image: N8,
+       img: N8,
       rating: "4.4 ★★★★☆"
     },
     {
       id: 9,
       title: "Nike Windrunner Jacket",
-      price: 4499,
+       discountPrice: 4499,
       description: "Lightweight jacket inspired by the classic Windrunner.",
-      image: N9,
+       img: N9,
       rating: "4.6 ★★★★½"
     },
     {
       id: 10,
       title: "Nike Everyday Cushioned Crew Socks (3 Pairs)",
-      price: 799,
+       discountPrice: 799,
       description: "Soft, sweat-wicking socks with arch support.",
-      image: N10,
+       img: N10,
       rating: "4.7 ★★★★½"
     },
     {
       id: 11,
       title: "Nike Court Vision Low",
-      price: 4299,
+       discountPrice: 4299,
       description: "Retro basketball shoes with durable construction.",
-      image: N11,
+       img: N11,
       rating: "4.5 ★★★★½"
     },
     {
       id: 12,
       title: "Nike Sportswear Essentials T-Shirt",
-      price: 1699,
+       discountPrice: 1699,
       description: "Soft cotton tee with a relaxed fit.",
-      image: N12,
+       img: N12,
       rating: "4.3 ★★★★☆"
     },
     {
       id: 13,
       title: "Nike Brasilia Training Backpack",
-      price: 1999,
+       discountPrice: 1999,
       description: "Sturdy backpack with padded straps and laptop sleeve.",
-      image: N13,
+       img: N13,
       rating: "4.5 ★★★★½"
     },
     {
       id: 14,
       title: "Nike React Infinity Run Flyknit",
-      price: 8999,
+       discountPrice: 8999,
       description: "Advanced running shoes with React cushioning.",
-      image: N14,
+       img: N14,
       rating: "4.8 ★★★★★"
     },
     {
       id: 15,
       title: "Nike Swoosh Wristbands (Pair)",
-      price: 699,
+       discountPrice: 699,
       description: "Absorbent wristbands for training or play.",
-      image: N15,
+       img: N15,
       rating: "4.4 ★★★★☆"
     },
     {
       id: 16,
       title: "Nike One Luxe Leggings",
-      price: 3799,
+       discountPrice: 3799,
       description: "Smooth and stretchy leggings for everyday movement.",
-      image: N16,
+       img: N16,
       rating: "4.6 ★★★★½"
     },
     {
       id: 17,
       title: "Nike Air Force 1 '07",
-      price: 7499,
+       discountPrice: 7499,
       description: "Iconic leather sneakers for timeless style.",
-      image: N17,
+       img: N17,
       rating: "4.9 ★★★★★"
     },
     {
       id: 18,
       title: "Nike Dri-FIT Head Tie",
-      price: 799,
+       discountPrice: 799,
       description: "Breathable tie-back headband for athletes.",
-      image: N18,
+       img: N18,
       rating: "4.4 ★★★★☆"
     },
     {
       id: 19,
       title: "Nike Therma-FIT Training Hoodie",
-      price: 3999,
+       discountPrice: 3999,
       description: "Warm fleece hoodie for training in cold conditions.",
-      image: N19,
+       img: N19,
       rating: "4.7 ★★★★½"
     },
     {
       id: 20,
       title: "Nike Flex Experience Run 11",
-      price: 3299,
+       discountPrice: 3299,
       description: "Smooth, flexible running shoes for daily wear.",
-      image: N20,
+       img: N20,
       rating: "4.5 ★★★★½"
     }
   ];
@@ -199,11 +199,11 @@ const Nike = () => {
         <div key={nike.id} className='bg-white rounded-lg shadow hover:shadow-lg transition p-4'>
                 <Link to={`/nike/${nike.id}`}>
                 <div className="w-full h-90 overflow-hidden mb-4 flex items-center justify-center bg-white">
-                    <img src={nike.image} alt={nike.title}  className="w-full h-full object-contain rounded-md" />
+                    <img src={nike. img} alt={nike.title}  className="w-full h-full object-contain rounded-md" />
                 </div>
                <p className="text-gray-700">{nike.title}</p>
                <p>{nike.rating}</p>
-               <span className="text-green-600 font-bold ">₹{nike.price}</span>
+               <span className="text-green-600 font-bold ">₹{nike. discountPrice}</span>
                <p className="text-sm text-gray-500 mt-1">{nike.description.slice(0,25)}</p>
                 </Link>
         </div>

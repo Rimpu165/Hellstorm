@@ -18,7 +18,7 @@
     width: 100vw;
     height: 400px;
     object-fit: cover;
-    flex-shrink: 0;
+    flex-shrink: 0; 
   }
   
   .dots {

@@ -12,6 +12,7 @@ const Beauty = () => {
       .catch((error) => console.error('API error:', error));
   }, []);
 
+  
   return (
     <>
     <div className="min-h-screen bg-pink-50 p-6">
