@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import './Men.css';
+import React, { useEffect, useState } from "react";
+import "./Men.css";
 import { Link } from "react-router-dom";
 
-import img1 from '../assets/cr.webp';
-import img2 from '../assets/lug.webp';
-import img3 from '../assets/sho.webp';
+import img1 from "../assets/cr.webp";
+import img2 from "../assets/lug.webp";
+import img3 from "../assets/sho.webp";
 
 import POLO from "../assets/polo.webp";
 import Levis from "../assets/levis.webp";
@@ -33,7 +33,7 @@ import ACT from "../assets/active.jpg";
 import Wal from "../assets/belt.jpg";
 import Flip from "../assets/flip.jpg";
 
-import Footer from '../log/Footer';
+import Footer from "../log/Footer";
 
 const images = [img1, img2, img3];
 
@@ -42,7 +42,7 @@ const Men = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex(prev => (prev + 1) % images.length);
+      setCurrentIndex((prev) => (prev + 1) % images.length);
     }, 3000);
 
     return () => clearInterval(interval);
@@ -54,84 +54,206 @@ const Men = () => {
 
   return (
     <div className="mn">
-      <div className="slider-container pt-10 overflow-hidden relative">
+      <div className="slider-container pt-10">
         <div
-          className="slider-track flex transition-transform duration-700 ease-in-out"
+          className="slider-track"
           style={{ transform: `translateX(-${currentIndex * 100}vw)` }}
         >
           {images.map((src, index) => (
-            <img key={index} src={src} alt={`Slide ${index + 1}`} className="w-screen h-64 sm:h-96 object-cover" />
+            <img key={index} src={src} alt={`Slide ${index + 1}`} />
           ))}
         </div>
 
-        <div className="dots flex justify-center mt-2">
+        <div className="dots">
           {images.map((_, idx) => (
             <span
               key={idx}
-              className={`dot w-3 h-3 mx-1 rounded-full cursor-pointer ${idx === currentIndex ? 'bg-blue-600' : 'bg-gray-400'}`}
+              className={`dot ${idx === currentIndex ? "active" : ""}`}
               onClick={() => goToImage(idx)}
             ></span>
           ))}
         </div>
       </div>
 
-      <div className="text-center mt-16 px-4">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-mono font-bold">BIGGEST DEALS ON TOP BRANDS</h1>
+      <div className="hero">
+        <h1 className="h1 mt-16 text-3xl font-mono ml-6 mb-6">
+          BIGGEST DEALS ON TOP BRANDS
+        </h1>
       </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 p-6">
-        {[{src: POLO, link: '/Mens'}, {src: Levis, link: '/Levis'}, {src: Puma, link: '/Puma'}, {src: Cros, link: '/Crocs'},
-          {src: Tommy, link: '/Tomy'}, {src: Ske, link: '/Sketcher'}, {src: Nike, link: '/Nike'}, {src: UC, link: '/Ufc'}]
-          .map((brand, idx) => (
-            <Link to={brand.link} key={idx}>
-              <img src={brand.src} alt="Brand" className="w-full h-28 object-contain hover:scale-105 transition-transform" />
-            </Link>
-        ))}
+      <div className="qwee p-6">
+        <div className="w flex flex-wrap justify-center lg:justify-around gap-6">
+          <Link to="/Mens">
+            <img className="ima12" src={POLO} alt="Polo" />
+          </Link>
+          <Link to="/Levis">
+            <img className="ima12" src={Levis} alt="Levis" />
+          </Link>
+          <Link to="/Puma">
+            <img className="ima12" src={Puma} alt="Puma" />
+          </Link>
+          <Link to="/Crocs">
+            <img className="ima12" src={Cros} alt="Crocs" />
+          </Link>
+        </div>
+
+        <div className="wA flex flex-wrap justify-center lg:justify-around gap-6 mt-10">
+          <Link to="/Tomy">
+            <img className="ima12" src={Tommy} alt="Tommy" />
+          </Link>
+          <Link to="/Sketcher">
+            <img className="ima12" src={Ske} alt="Sketcher" />
+          </Link>
+          <Link to="/Nike">
+            <img className="ima12" src={Nike} alt="Nike" />
+          </Link>
+          <Link to="/Ufc">
+            <img className="ima12" src={UC} alt="UFC" />
+          </Link>
+        </div>
       </div>
 
-      <div className="text-center my-10 px-4">
-        <h1 className="text-3xl sm:text-5xl font-semibold text-blue-900">EXPLORE BY CATEGORY</h1>
+      <div className="first text-5xl font-semibold tracking-tight text-balance text-blue-900 sm:text-7xl">
+        <h1>EXPLORE BY CATEGORY</h1>
       </div>
+      <div className=" qw   p-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 gap-10">
+        <Link to="/tshirt">
+          {" "}
+          <div className=" qa    bg-white text-center    border-2 border-white rounded-md shadow p-2">
+            <img src={IMA} alt="T-Shirts" className="iam" />
+            <p className="font-small mt-2">T-Shirts</p>
+            <p className="text-blue-700 font-bold text-lg">40-80% OFF</p>
+            <button className="text-sm text-gray-700">Shop Now</button>
+          </div>{" "}
+        </Link>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 px-4 pb-10">
-        {[
-          { img: IMA, name: 'T-Shirts', link: '/tshirt' },
-          { img: SPO, name: 'Sports Shoes', link: '/shoes' },
-          { img: SH, name: 'Shirts', link: '/shirt' },
-          { img: Jean, name: 'Jeans' },
-          { img: Kurtas, name: 'Kurtas & Sets' },
-          { img: TR, name: 'Trousers' },
-          { img: Track, name: 'Track Pants' },
-          { img: Loung, name: 'Loungewear' },
-          { img: INN, name: 'Innerwear' },
-          { img: Wal, name: 'Belts & Wallets' },
-          { img: Sun, name: 'Sunglasses & Frames' },
-          { img: Kids, name: 'Kids Wear' },
-          { img: SPO, name: 'Casual Shoes', link: '/shoes' },
-          { img: Flip, name: 'Flip-Flops' },
-          { img: HOM, name: 'Home Furnishing' },
-          { img: ACT, name: 'Active Wear' },
-          { img: Party, name: 'Party Wear' },
-          { img: Jak, name: 'Jackets' }
-        ].map((item, index) => (
-          <div key={index} className="bg-white text-center border-2 rounded-md shadow p-2 hover:shadow-md transition-shadow">
-            {item.link ? (
-              <Link to={item.link}>
-                <img src={item.img} alt={item.name} className="w-full h-32 object-contain" />
-                <p className="mt-2 font-medium">{item.name}</p>
-                <p className="text-blue-700 font-bold text-lg">40–80% OFF</p>
-                <button className="text-sm text-gray-700 mt-1">Shop Now</button>
-              </Link>
-            ) : (
-              <>
-                <img src={item.img} alt={item.name} className="w-full h-32 object-contain" />
-                <p className="mt-2 font-medium">{item.name}</p>
-                <p className="text-blue-700 font-bold text-lg">40–80% OFF</p>
-                <button className="text-sm text-gray-700 mt-1">Shop Now</button>
-              </>
-            )}
-          </div>
-        ))}
+        <Link to="/shoes">
+          {" "}
+          <div className="qa bg-white text-center  border-2 border-white rounded-md shadow p-2">
+            <img src={SPO} alt="Sports Shoes" className="iam" />
+            <p className="font-small mt-2">Sports Shoes</p>
+            <p className="text-blue-700 font-bold text-lg">40-80% OFF</p>
+            <button className="text-sm text-gray-700">Shop Now</button>
+          </div>{" "}
+        </Link>
+
+        <Link to="/shirt">
+          {" "}
+          <div className="qa bg-white text-center  border-2 border-cyan-300 rounded-md shadow p-2">
+            <img src={SH} alt="Shirts" className="iam" />
+            <p className="para">Shirts</p>
+            <p className="text-blue-700 font-bold text-lg">40-80% OFF</p>
+            <button className="text-sm text-gray-700">Shop Now</button>
+          </div>{" "}
+        </Link>
+
+        <div className="qa bg-white text-center  border-2 border-cyan-300 rounded-md shadow p-2">
+          <img src={Jean} alt="Jeans" className="iam" />
+          <p className="para">Jeans</p>
+          <p className="text-blue-700 font-bold text-lg">40-80% OFF</p>
+          <button className="text-sm text-gray-700">Shop Now</button>
+        </div>
+
+        <div className="qa bg-white text-center border-2 border-cyan-300 rounded-md shadow p-2">
+          <img src={Kurtas} alt="Jeans" className="iam" />
+          <p className="para">Kurtas & Sets</p>
+          <p className="text-blue-700 font-bold text-lg">40-80% OFF</p>
+          <button className="text-sm text-gray-700">Shop Now</button>
+        </div>
+
+        <div className="qa bg-white text-center border-2 border-cyan-300 rounded-md shadow p-2">
+          <img src={TR} alt="Jeans" className="iam" />
+          <p className="para">Trousers</p>
+          <p className="text-blue-700 font-bold text-lg">40-80% OFF</p>
+          <button className="text-sm text-gray-700">Shop Now</button>
+        </div>
+
+        <div className="qa bg-white text-center  border-2 border-cyan-300 rounded-md shadow p-2">
+          <img src={Track} alt="Jeans" className="iam" />
+          <p className="para">Track Pants</p>
+          <p className="text-blue-700 font-bold text-lg">40-80% OFF</p>
+          <button className="text-sm text-gray-700">Shop Now</button>
+        </div>
+
+        <div className="qa bg-white text-center  border-2 border-cyan-300 rounded-md shadow p-2">
+          <img src={Loung} alt="Jeans" className="iam" />
+          <p className="para">Loungewear</p>
+          <p className="text-blue-700 font-bold text-lg">40-80% OFF</p>
+          <button className="text-sm text-gray-700">Shop Now</button>
+        </div>
+
+        <div className="qa bg-white text-center  border-2 border-cyan-300 rounded-md shadow p-2">
+          <img src={INN} alt="Jeans" className="iam" />
+          <p className="para">Innerwear</p>
+          <p className="text-blue-700 font-bold text-lg">40-80% OFF</p>
+          <button className="text-sm text-gray-700">Shop Now</button>
+        </div>
+
+        <div className="qa bg-white text-center  border-2 border-cyan-300 rounded-md shadow p-2">
+          <img src={Wal} alt="Jeans" className="iam" />
+          <p className="para">Belts % Wallets</p>
+          <p className="text-blue-700 font-bold text-lg">40-80% OFF</p>
+          <button className="text-sm text-gray-700">Shop Now</button>
+        </div>
+
+        <div className="qa bg-white text-center  border-2 border-cyan-300 rounded-md shadow p-2">
+          <img src={Sun} alt="Jeans" className="iam" />
+          <p className="para">Sunglases % Frames</p>
+          <p className="text-blue-700 font-bold text-lg">40-80% OFF</p>
+          <buttonp className="text-sm text-gray-700">Shop Now</buttonp>
+        </div>
+
+        <div className="qa bg-white text-center  border-2 border-cyan-300 rounded-md shadow p-2">
+          <img src={Kids} alt="Jeans" className="iam" />
+          <p className="para">Kids Wear</p>
+          <p className="text-blue-700 font-bold text-lg">40-80% OFF</p>
+          <button className="text-sm text-gray-700">Shop Now</button>
+        </div>
+
+        <Link to="/shoes">
+          {" "}
+          <div className="qa bg-white text-center  border-2 border-cyan-300 rounded-md shadow p-2">
+            <img src={SPO} alt="Jeans" className="iam" />
+            <p className="para">Casual Shoes</p>
+            <p className="text-blue-700 font-bold text-lg">40-80% OFF</p>
+            <button className="text-sm text-gray-700">Shop Now</button>
+          </div>{" "}
+        </Link>
+
+        <div className="qa bg-white text-center  border-2 border-cyan-300 rounded-md shadow p-2">
+          <img src={Flip} alt="Jeans" className="iam" />
+          <p className="para">Flip-Flops</p>
+          <p className="text-blue-700 font-bold text-lg">40-80% OFF</p>
+          <button className="text-sm text-gray-700">Shop Now</button>
+        </div>
+
+        <div className="qa bg-white text-center  border-2 border-cyan-300 rounded-md shadow p-2">
+          <img src={HOM} alt="Jeans" className="iam" />
+          <p className="para">Home Furnishing</p>
+          <p className="text-blue-700 font-bold text-lg">40-80% OFF</p>
+          <button className="text-sm text-gray-700">Shop Now</button>
+        </div>
+
+        <div className="qa bg-white text-center  border-2 border-cyan-300 rounded-md shadow p-2">
+          <img src={ACT} alt="Jeans" className="iam" />
+          <p className="para">Active Wear</p>
+          <p className="text-blue-700 font-bold text-lg">40-80% OFF</p>
+          <button className="text-sm text-gray-700">Shop Now</button>
+        </div>
+
+        <div className="qa bg-white text-center  border-2 border-cyan-300 rounded-md shadow p-2">
+          <img src={Party} alt="Jeans" className="iam" />
+          <p className="para">Part Wear</p>
+          <p className="text-blue-700 font-bold text-lg">40-80% OFF</p>
+          <button className="text-sm text-gray-700">Shop Now</button>
+        </div>
+
+        <div className="qa bg-white text-center  border-2 border-cyan-300 rounded-md shadow p-2">
+          <img src={Jak} alt="Jeans" className="iam" />
+          <p className="para">Jakets</p>
+          <p className="text-blue-700 font-bold text-lg">40-80% OFF</p>
+          <button className="text-sm text-gray-700">Shop Now</button>
+        </div>
       </div>
 
       <Footer />
