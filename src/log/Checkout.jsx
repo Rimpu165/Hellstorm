@@ -42,7 +42,6 @@ const Checkout = () => {
   return (
     <>
       <div className="flex flex-col lg:flex-row gap-8 p-8 bg-gray-100 min-h-screen relative">
-        {/* Contact and Shipping Info */}
         <div className="w-full lg:w-1/3 bg-white p-6 rounded-2xl shadow-lg">
           <h2 className="text-2xl font-bold mb-6 text-gray-800">Contact Information</h2>
           <input
@@ -84,7 +83,6 @@ const Checkout = () => {
           </div>
         </div>
 
-        {/* Payment Info */}
         <div className="w-full lg:w-1/3 bg-white p-6 rounded-2xl shadow-lg">
           <h2 className="text-2xl font-bold mb-6 text-gray-800">Payment Method</h2>
           <div className="space-y-4">
@@ -122,7 +120,6 @@ const Checkout = () => {
           </div>
         </div>
 
-        {/* Order Summary */}
         <div className="w-full lg:w-1/3 bg-white p-6 rounded-2xl shadow-lg">
           <h2 className="text-2xl font-bold mb-6 text-gray-800">Order Summary</h2>
           <div className="space-y-2 mb-4 text-sm text-gray-700">
@@ -159,7 +156,6 @@ const Checkout = () => {
           </button>
         </div>
 
-        {/* Popup */}
         {showPopup && (
           <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-40 z-50">
             <div className="bg-white p-8 rounded-2xl shadow-2xl text-center w-96">
